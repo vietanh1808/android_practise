@@ -1,5 +1,6 @@
 package com.example.democonnectdb;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -23,6 +24,21 @@ public class MyDatabase extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         Cursor c = sqLiteDatabase.rawQuery(sql, null);
         return c;
+    }
+
+    public long insert(String table, String nullColumnHack, ContentValues values) {
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        return sqLiteDatabase.insert(table, nullColumnHack, values);
+    }
+
+    public long update(String table, ContentValues values, String whereClause, String[] whereArgs) {
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        return sqLiteDatabase.update(table, values, whereClause, whereArgs);
+    }
+
+    public long delete(String table , String whereClause, String[] whereArgs) {
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+        return sqLiteDatabase.delete(table, whereClause, whereArgs);
     }
 
     @Override

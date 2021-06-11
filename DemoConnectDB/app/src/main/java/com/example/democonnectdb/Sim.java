@@ -40,10 +40,6 @@ public class Sim {
 
     @Override
     public String toString() {
-        return "Sim{" +
-                "id=" + id +
-                ", so='" + so + '\'' +
-                ", gia=" + gia +
-                '}';
+        return so;
     }
 }
