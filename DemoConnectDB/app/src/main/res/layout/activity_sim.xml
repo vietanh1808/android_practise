@@ -16,16 +16,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="sửa"
-        android:id="@+id/btnAdd"/>
+        android:id="@+id/btnUpdate"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="xoá"
-        android:id="@+id/btnAdd"/>
+        android:id="@+id/btnDel"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="tìm kiếm"
-        android:id="@+id/btnAdd"/>
+        android:id="@+id/btnSearch"/>
 
 </LinearLayout>
